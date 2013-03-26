@@ -60,9 +60,7 @@
 		</copy>
 		<mkdir dir="${dist.dir}/${temp.dir}"/>
 		<mkdir dir="${dist.dir}/${logs.dir}"/>
-		<copy todir="${dist.dir}/${test.dir}">
-			<fileset dir="${test.dir}"/>
-		</copy>
+		<mkdir dir="${dist.dir}/${test.dir}"/>
 		<copy file="${release.txt}" todir="${dist.dir}"/>
 		<jar jarfile="${dist.dir}/${bin.dir}/${jar.name}" basedir="${classes.dir}" />
 	</target>
