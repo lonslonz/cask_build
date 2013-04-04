@@ -17,9 +17,10 @@
 	<property file="${src.dir}/version.properties"/>
 	<property name="version" value="${VERSION}"/>
 	<property name="jar.name" value="${ant.project.name}-${version}.jar"/>
-
+<!--
 	<property environment="env"/>
         <property name="github.repo.local" value="${env.GITHUB_MAVEN_REPO}"/>
+-->
 	
 	<path id="libraries">
 		<fileset dir="${lib.dir}">
@@ -88,6 +89,7 @@
                <artifacts pattern="target/bin/[artifact]-[revision].[ext]"/>
         </ivy:publish>
     </target>
+<!--
     <target name="github" depends="resolve, package" description="Publish this build into repository">
         <property name="ivy.local.default.ivy.pattern" value="[organisation]/[module]/[type]s/[artifact]-[revision].[ext]" />
         <property name="ivy.local.default.artifact.pattern" value="[organisation]/[module]/[type]s/[artifact]-[revision].[ext]"  />
@@ -95,7 +97,7 @@
                <artifacts pattern="target/bin/[artifact]-[revision].[ext]"/>
         </ivy:publish>
     </target>
-
+-->
 <!--
     <property environment="env"></property>
 	<property name="findbugs.home" value="${env.FINDBUGS_HOME}"/>
